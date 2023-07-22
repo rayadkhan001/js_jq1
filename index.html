@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Java and bootstrp template.</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css links -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mediaquery.css">
+    <!-- internal js -->
+    <!-- text Change -->
+    <script>
+        function textChange() {
+        document.getElementById('h2').textContent = "Good Practice";
+    }
+    </script>
+</head>
+<body>
+    <!-- text change -->
+    <div class="container">
+        <h1 class="text-danger">Click the button to change the text</h1>
+        <button type="button" class="btn btn-dark my-2" onclick="textChange()">Changes the Text</button>
+        <h2 id="h2">Hello world!</h2>
+    </div>
+
+    <!-- show date -->
+    <div class="container mt-5">
+        <h1 class="text-danger">Click the button to change the date</h1>
+        <button type="button" class="btn btn-dark" onclick="showDate()">Show Date</button>
+        <h2 id="dh2">Date</h2>
+        <script>
+            function showDate(){
+                document.getElementById('dh2').innerHTML = Date();
+            }
+        </script>
+    </div>
+
+    <!-- variable -->
+    <div class="container mt-5">
+        <h1 class="text-danger">Click the button to repeat the massage</h1>
+        <button type="button" class="btn btn-dark" onclick="dataRepeat()">Repeat Massage</button>
+        <h2 id="dr"></h2>
+    </div>
+
+    <!-- bulb on & off -->
+    <div class="container mt-5">
+        <h1 class="text-danger">Click the button to turn off/on the bulb</h1>
+        <button type="button" class="btn btn-success" onclick="bulbOn()">On</button>
+        <button type="button" class="btn btn-dark" onclick="bulbOff()">Off</button>
+        <img id="bulb" src="img/off.gif" alt="off.gif">
+    </div>
+
+    <!-- font-size -->
+    <div class="container mt-5">
+        <h1 class="text-danger">Click the button to change the fontsize</h1>
+        <button type="button" class="btn btn-dark" onclick="fontsize()">font-size</button>
+        <h2 id="fs">Lorem ipsum dolor, sit.</h2>
+    </div>
+
+    <!-- show/hide -->
+    <div class="container mt-5">
+        <h1 class="text-danger">Click the button to show/hide the text.</h1>
+        <button type="button" class="btn btn-success" onclick="textShow()">Show</button>
+        <button type="button" class="btn btn-dark" onclick="textHide()">Hide</button>
+        <h2 id="tsh">Lorem ipsum dolor, sit.</h2>
+    </div>
+
+    <script>
+        function textShow(){
+            document.getElementById('tsh').style.display = "block";
+        }
+        function textHide(){
+            document.getElementById('tsh').style.display = "none";
+        }
+    </script>
+
+    <!-- arithmatic operator -->
+    <div class="container mt-5">
+        <h2 class="text-danger">My First Web Page</h2>
+        <p>My first paragraph.</p>
+    
+        <p>Never call document.write after the document has finished loading.
+        It will overwrite the whole document.</p>
+    
+        <script>
+            document.write(5 + 6);
+        </script>
+    </div>
+
+    <!-- JavaScript Statements, arithmatic operator -->
+    <div class="container mt-5">
+        <h2 class="text-danger">JavaScript Statements</h2>
+
+        <p>A <b>JavaScript program</b> is a list of <b>statements</b> to be executed by a computer.</p>
+    
+        <p id="demo"></p>
+    
+        <script>
+            let x, y, z;  // Statement 1
+            x = 9;        // Statement 2
+            y = 9;        // Statement 3
+            z = x + y;    // Statement 4
+            
+            document.getElementById("demo").innerHTML =
+            "The value of z is " + z + ".";  
+        </script>
+    </div>
+
+    <!-- JavaScript Numbers -->
+    <div class="container mt-5">
+        <h2 class="text-danger">JavaScript Numbers</h2>
+        <p>Number can be written with or without decimals.</p>
+        <p id="demo"></p>
+    </div>
+
+    <!-- JavaScript Comments 1st -->
+    <div class="container mt-5">
+        <h1 class="text-danger" id="myH"></h1>
+        <p id="myP"></p>
+    </div>
+
+    <!-- JavaScript Variables -->
+    <div class="container mt-5">
+        <h1 class="text-danger">JavaScript Variables</h1>
+        <p>In this example, x, y, and z are undeclared.</p>
+        <p>They are automatically declared when first used.</p>
+        <p id="demo"></p>
+        <script>
+            x = 5;
+            y = 6;
+            z = x + y;
+            document.getElementById("demo").innerHTML =
+            "The value of z is: " + z;
+        </script>
+    </div>
+
+    <!-- JavaScript const -->
+    <div class="container mt-5">
+        <h2 class="text-danger">JavaScript const 1st</h2>
+
+        <p id="example"></p>
+        
+        <script>
+            try {
+                const PI = 3.141592653589793;
+                PI = 3.14;
+            }
+            catch (err) {
+                document.getElementById("example").innerHTML = err;
+            }
+        </script>
+    </div>
+
+    <!-- JavaScript const -->
+    <div class="container mt-5">
+        <h2 class="text-danger">JavaScript const 2nd</h2>
+        <p>Declaring a constant array does NOT make the elements unchangeable:</p>
+        <p id="js_demo"></p>
+        <script>
+            const cars = ["Saab", "Volvo", "BMW"];
+            cars[0] = "Toyota";
+            cars.push("Audi");
+            document.getElementById("js_demo").innerHTML = cars; 
+        </script>
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">JavaScript Operators</h1>
+        <h2>The Assignment (=) Operator</h2>
+        <p id="demo45"></p>
+        <script>
+            let x = 5;
+            let y = 2;
+            let z = x + y;
+            document.getElementById("demo45").innerHTML = "The sum of x + y is: " + z;
+        </script>
+    </div>
+    <!-- JavaScript Arithmetic -->
+    <div class="container mt-5">
+        <h1 class="text-danger">JavaScript Arithmetic</h1>
+        <h2>The * Operator</h2>
+        <p id="demo88"></p>
+        <script>
+            let x = 5;
+            let y = 2;
+            let z = x * y;
+            document.getElementById("demo88").innerHTML = z;
+        </script>
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">JavaScript Arithmetic 1</h1>
+        <h2>Arithmetic Operations</h2>
+        <p>A typical arithmetic operation takes two numbers (or expressions) and produces a new number.</p>
+        <p id="demo67"></p>
+        <script>
+            let a = 3;
+            let x = (100 + 50) * a;
+            document.getElementById("demo67").innerHTML = x;
+        </script>
+    </div>
+
+    <!-- JavaScript Assignments -->
+    <div class="container mt-5">
+        <h1 class="text-danger">JavaScript Assignments 2</h1>
+        <h2>Multiplication Assignment</h2>
+        <h3>The *= Operator</h3>
+        <p id="demo47"></p>
+        <script>
+            let x = 10;
+            x *= 5;
+            document.getElementById("demo47").innerHTML = "Value of x is: " + x;
+        </script>
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">JavaScript Assignments 3</h1>
+        <h2>Subtraction Assignment</h2>
+        <h3>The -= Operator</h3>
+        <p id="demo97"></p>
+        <script>
+            let x = 10;
+            x -= 5;
+            document.getElementById("demo97").innerHTML = "Value of x is: " + x;
+        </script>
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">JavaScript Assignments 4</h1>
+        <h3>The **= Operator</h3>
+
+        <p id="demo66"></p>
+
+        <script>
+            let x = 10;
+            x **= 5;
+            document.getElementById("demo66").innerHTML = "Value of x is: " + x;
+        </script>
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">Division Assignment</h1>
+        <h3>The /= Operator</h3>
+        <p id="demo100"></p>
+        <script>
+            let x = 10;
+            x /= 5;
+            document.getElementById("demo100").innerHTML = x;
+        </script>
+    </div>
+
+
+    <div class="container mt-5">
+        <h1 class="text-danger">Remainder The %= Operator</h1>
+        <p id="demo11"></p>
+        <script>
+            let x = 10;
+            x %= 5;
+            document.getElementById("demo11").innerHTML = "Value of x is: " + x;
+        </script>
+    </div>
+
+
+
+    <div class="container mt-5">
+        <h1 class="text-danger">JavaScript</h1>
+
+
+        <p>When adding a string and a number, JavaScript will treat the number as a string.</p>
+        <p id="demo76"></p>
+        <script>
+            let x = "Volvo" + 16;
+            document.getElementById("demo76").innerHTML = x;
+        </script> 
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">JavaScript 2</h1> 
+        <p>JavaScript evaluates expressions from left to right. Different sequences can produce different results:</p>
+
+        <p id="demo88"></p>
+
+        <script>
+            let x = 16 + 4 + "Volvo";
+            document.getElementById("demo88").innerHTML = x;
+        </script>
+    </div>
+
+
+
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+
+
+
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+
+
+
+
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+
+
+
+
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+
+
+
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+
+
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+   </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>
+   </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-danger"></h1>        
+    </div>
+
+    <!-- js links -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
